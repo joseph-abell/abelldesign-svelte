@@ -21,7 +21,6 @@ export const home = `
       createdAt
       publishedAt
       title
-      featuredText
       featuredDeck
       featuredImage {
         url

@@ -7,7 +7,6 @@ const work = `
       title
       slug
       keywords
-      featuredText
       featuredDeck
       featuredImage {
         url
