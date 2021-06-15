@@ -6,7 +6,7 @@
             <li>
                 <IntersectionObserver once={true} let:intersecting={intersecting}>
                     {#if intersecting}
-                        <Image alt='' src={brand.image.url} height='auto' />
+                        <Image alt='' src={brand.image.url} margin='0 auto 20px'/>
                     {/if}
                 </IntersectionObserver>
             </li>

@@ -4,11 +4,11 @@
     export let src = ''
     export let alt = ''
     export let margin = '0';
-    export let height;
+    export let height = 'auto';
 
     let loaded = false;
     let thisImage;
-    let heightPx = height ? height + 'px' : 'auto';
+    let heightPx = height !== 'auto' ? height + 'px' : 'auto';
 
     onMount(() => {
         thisImage.onload = () => {
