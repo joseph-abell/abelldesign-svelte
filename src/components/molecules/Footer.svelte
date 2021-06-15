@@ -2,7 +2,7 @@
     import SocialMediaItem from './SocialMediaItem.svelte';
     import IntersectionObserver from '../atoms/IntersectionObserver.svelte';
     import FooterLogoContainer from '../atoms/FooterLogoContainer.svelte';
-    import Image from '../atoms/Image.svelte';
+    import FooterImage from '../atoms/FooterImage.svelte';
 
     type ImageType = { url: string, height: string };
     type FooterType = {
@@ -28,21 +28,34 @@
         color: white;
     }
 
-    div {
+    ul {
+        list-style: none;
+    }
+
+    .footer-container {
         width: 80vw;
         margin: 0 auto;
         padding: 30px 0;
     }
 
+    @media (min-width: 768px) {
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+        }
+    }
+
     @media (min-width: 1200px) {
-        div {
+        .footer-container {
             width: 1024px;
+            margin: 0 auto;
         }
     }
 </style>
 
 <footer>
-    <div>
+    <div class="footer-container">
         <ul>
             <SocialMediaItem
                 text={footer.emailText}
@@ -56,6 +69,8 @@
                 image={footer.phoneImage.url}
                 height={footer.phoneImage.height}
             />
+        </ul>
+        <ul>
             <SocialMediaItem
                 text={footer.linkedInText}
                 link={footer.linkedInLink}
@@ -69,10 +84,12 @@
                 height={footer.instagramImage.height}
             />
         </ul>
-        <FooterLogoContainer>
-            <IntersectionObserver>
-                <Image src={footer.footerLogoImage.url} height='159' alt='' margin="0 auto" />
-            </IntersectionObserver>
-        </FooterLogoContainer>
+        <div>
+            <FooterLogoContainer>
+                <IntersectionObserver>
+                    <FooterImage src={footer.footerLogoImage.url} height='159' alt='' margin="0 auto" />
+                </IntersectionObserver>
+            </FooterLogoContainer>
+        </div>
     </div>
 </footer>

@@ -4,18 +4,18 @@
     import SpanAsLink from '../atoms/SpanAsLink.svelte';
     import IntersectionObserver from '../atoms/IntersectionObserver.svelte';
     import FullWidthMobileImage from '../atoms/FullWidthMobileImage.svelte';
-    export let service;
+    export let item;
 </script>
 
 <li>
     <a
-        class="service-link"
-        href={`/${service.work && service.work.slug}`}
-        style="--flexDirection: {service.oddEven === 0 ? 'row' : 'row-reverse'}"
+        class={item.oddEven === 0 ? 'data-item-link row' : 'data-item-link row-reverse'}
+        href={`/${item.work && item.work.slug}`}
+        style="--flexDirection: {item.oddEven === 0 ? 'row' : 'row-reverse'}"
     >
-        <div class='service-text'>
-            <H3>{service.title}</H3>
-            <P>{service.featuredDeck} <SpanAsLink>{service.featuredLinkText}</SpanAsLink></P>
+        <div class='data-item-text'>
+            <H3>{item.title}</H3>
+            <P>{item.featuredDeck} <SpanAsLink>{item.featuredLinkText}</SpanAsLink></P>
         </div>
 
         <div>
@@ -23,7 +23,7 @@
                 {#if intersecting}
                     <FullWidthMobileImage
                         alt=''
-                        src={service.featuredImage.url}
+                        src={item.featuredImage.url}
                         height='300'
                     />
                 {/if}
@@ -33,7 +33,7 @@
 </li>
 
 <style>
-    .service-link {
+    .data-item-link {
         color: #B40808;
         text-decoration: none;
         display: inline-block;
@@ -42,7 +42,7 @@
     }
 
     @media (min-width: 768px) {
-        .service-link {
+        .data-item-link {
             padding: 0;
             display: flex;
             justify-content: space-between;
@@ -51,8 +51,16 @@
             align-items: stretch;
         }
 
-        .service-text {
+        .data-item-text {
             flex-grow: 1;
+        }
+
+        .row .data-item-text {
+            margin-right: 40px;
+        }
+
+        .row-reverse .data-item-text {
+            margin-left: 40px;
         }
     }
 </style>

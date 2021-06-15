@@ -13,6 +13,7 @@
 <style>
     li {
         padding: 10px 0;
+        list-style: none;
     }
     a, .flex {
         color: white;
