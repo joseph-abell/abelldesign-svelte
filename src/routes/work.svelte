@@ -32,7 +32,7 @@
         {#each works as work (work.id)}
             <li>
                 <a href={work.slug}>
-                    <h3>{work.featuredText}</h3>
+                    <h3>{work.title}</h3>
                     <p>{work.featuredDeck}</p>
                     <p>{work.featuredLinkText}</p>
 

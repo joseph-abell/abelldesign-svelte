@@ -6,7 +6,6 @@ const services = `
         title
         stage
         publishedAt
-        featuredText
         featuredLinkText
         featuredDeck
         featuredImage {

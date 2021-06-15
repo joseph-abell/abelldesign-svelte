@@ -5,7 +5,6 @@ const works = `
       createdAt
       publishedAt
       title
-      featuredText
       featuredDeck
       featuredImage {
         url

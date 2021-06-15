@@ -14,7 +14,7 @@
         style="--flexDirection: {service.oddEven === 0 ? 'row' : 'row-reverse'}"
     >
         <div class='service-text'>
-            <H3>{service.featuredText}</H3>
+            <H3>{service.title}</H3>
             <P>{service.featuredDeck} <SpanAsLink>{service.featuredLinkText}</SpanAsLink></P>
         </div>
 

@@ -6,7 +6,6 @@ export const home = `
       publishedAt
       title
       slug
-      featuredText
       featuredDeck
       featuredImage {
         url
