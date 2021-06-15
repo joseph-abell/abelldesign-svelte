@@ -15,7 +15,7 @@ const works = `
     worksPages(first:1) {
       quote
       quoter
-      keywords
+
     }
   }  
 `;

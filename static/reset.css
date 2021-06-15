@@ -25,10 +25,10 @@ figure,
 figcaption,
 blockquote,
 dl,
+menu,
 dd {
   margin: 0;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 18px;
 }
 
 /* Set core body defaults */

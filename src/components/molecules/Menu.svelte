@@ -54,12 +54,6 @@
         }
     }
 
-    @media (min-width: 900px) {
-        menu {
-            padding-left: 100px;
-        }
-    }
-
     @media (min-width: 1024px) {
         menu {
             width: 550px;
@@ -72,7 +66,7 @@
     <ul>
         {#each menu as menuItem (menuItem.slug)}
             <li>
-                <A href={menuItem.slug.length > 1 ? `/${menuItem.slug}` : menuItem.slug} display="block" padding="30px 0">
+                <A href={menuItem.slug.length > 1 ? `/${menuItem.slug}` : menuItem.slug} display="block" padding="30px 0" color="rgba(0, 0, 0, 0.8)">
                     {menuItem.text}
                 </A>
             </li>

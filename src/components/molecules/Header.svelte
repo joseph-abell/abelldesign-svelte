@@ -37,6 +37,8 @@
         header {
             position: static;
             width: auto;
+            display: flex;
+            align-items: center;
         }
         header div {
             margin: 0;

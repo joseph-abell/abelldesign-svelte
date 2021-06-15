@@ -18,17 +18,19 @@
             <P>{item.featuredDeck} <SpanAsLink>{item.featuredLinkText}</SpanAsLink></P>
         </div>
 
-        <div>
-            <IntersectionObserver once={true} let:intersecting={intersecting}>
-                {#if intersecting}
-                    <FullWidthMobileImage
-                        alt=''
-                        src={item.featuredImage.url}
-                        height='300'
-                    />
-                {/if}
-            </IntersectionObserver>
-        </div>
+        {#if item.featuredImage.url}
+            <div>
+                <IntersectionObserver once={true} let:intersecting={intersecting} style="display: flex; align-items: center; justify-content: center;">
+                    {#if intersecting}
+                        <FullWidthMobileImage
+                            alt=''
+                            src={item.featuredImage.url}
+                            height='300'
+                        />
+                    {/if}
+                </IntersectionObserver>
+            </div>
+        {/if}
     </a>
 </li>
 
@@ -39,6 +41,7 @@
         display: inline-block;
         padding: 0;
         position: relative;
+        margin-bottom: 40px;
     }
 
     @media (min-width: 768px) {

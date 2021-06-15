@@ -7,7 +7,9 @@
         {/each}
         </ContentList>
 
-    <CenteredLink href={link}>{linkText}</CenteredLink>
+    {#if linkText && linkText.length > 0}
+        <CenteredLink href={link}>{linkText}</CenteredLink>
+    {/if}
 </div>
 
 <script>
@@ -18,6 +20,6 @@
 
     export let title;
     export let data;
-    export let link;
-    export let linkText
+    export let link = '';
+    export let linkText = ''
 </script>

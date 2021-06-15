@@ -87,7 +87,7 @@
         <div>
             <FooterLogoContainer>
                 <IntersectionObserver style="display: flex; align-items: center; justify-content: center;">
-                    <FooterImage src={footer.footerLogoImage.url} height='159' alt='' />
+                    <FooterImage src={footer.footerLogoImage.url} height='75' alt='' />
                 </IntersectionObserver>
             </FooterLogoContainer>
         </div>

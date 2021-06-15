@@ -31,8 +31,8 @@
         justify-items: stretch;
         align-items: stretch;
         grid-template-columns: 1fr 1fr 1fr;
-        column-gap: 20px;
-        row-gap: 20px;
+        column-gap: 40px;
+        row-gap: 40px;
         margin-bottom: 30px;
     }
 </style>
