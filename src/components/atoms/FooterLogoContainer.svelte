@@ -7,7 +7,6 @@
     }
     @media (min-width: 768px) {
         div {
-            position: relative;
             width: auto;
             margin: inherit;
             height: 100%;

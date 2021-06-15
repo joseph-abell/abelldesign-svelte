@@ -44,7 +44,7 @@
     {:else}
         <div class="flex">
             <div class="imageContainer">
-                <IntersectionObserver once={true} let:intersecting={intersecting}><Image src={image} {alt} {height} /></IntersectionObserver>
+                <IntersectionObserver once={true} let:intersecting={intersecting} style="display: flex;"><Image src={image} {alt} {height} /></IntersectionObserver>
             </div>
 
             <div>{text}</div>

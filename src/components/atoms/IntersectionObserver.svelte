@@ -8,6 +8,7 @@
     export let bottom = 0;
     export let left = 0;
     export let right = 0;
+    export let style = ''
   
     let intersecting = false;
     let container;
@@ -57,6 +58,6 @@
     }
   </style>
   
-  <div bind:this={container}>
+  <div bind:this={container} {style}>
     <slot {intersecting}></slot>
   </div>

@@ -4,7 +4,7 @@
     <ul class='brand-list'>
         {#each brands as brand (brand.id)}
             <li>
-                <IntersectionObserver once={true} let:intersecting={intersecting}>
+                <IntersectionObserver once={true} let:intersecting={intersecting} style="display: flex; align-items: center; justify-content: center;">
                     {#if intersecting}
                         <Image alt='' src={brand.image.url} margin='0 auto 20px'/>
                     {/if}

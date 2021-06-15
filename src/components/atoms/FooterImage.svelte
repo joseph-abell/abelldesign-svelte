@@ -3,7 +3,6 @@
 
     export let src = ''
     export let alt = ''
-    export let margin = '0';
     export let height;
 
     let loaded = false;
@@ -24,18 +23,11 @@
         opacity: 0;
         transition: opacity 300ms ease-out, height 300px ease-out;
         height: var(--height);
-        margin: var(--margin);
+        margin: 0 auto;
     }
     @media (min-width: 768px) {
         img {
             height: auto;
-        }
-
-        div {
-            position: absolute;
-            top: 50%;
-            margin-top: -25px;
-            width: 100%;
         }
     }
 
@@ -44,4 +36,4 @@
     }
 </style>
 
-<div><img class:loaded bind:this={thisImage} {src} {alt} style="--height:{heightPx}; --margin:{margin}" /></div>
+<div><img class:loaded bind:this={thisImage} {src} {alt} style="--height:{heightPx};" /></div>
