@@ -1,6 +1,5 @@
 <script context="module">
-    import Header from '../components/molecules/Header.svelte';
-    import Footer from '../components/molecules/Footer.svelte';
+
 
     import fetchData from '../helpers/fetchData';
     import query from '../queries/site';
@@ -15,6 +14,9 @@
 </script>
 
 <script>
+    import Header from '../components/molecules/Header.svelte';
+    import Footer from '../components/molecules/Footer.svelte';
+    import WhiteBackground from '../components/atoms/WhiteBackground.svelte';
     export let headers = [];
     export let footers = [];
     export let menu = [];
@@ -24,8 +26,11 @@
 </script>
 
 <div>
-    <Header {header} {menu} />
-    <slot></slot>
+    <WhiteBackground>
+        <Header {header} {menu} />
+        <slot></slot>
+    </WhiteBackground>
+    
 
     <Footer {footer} />
 </div>

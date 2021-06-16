@@ -16,6 +16,7 @@
 <style>
     .header-container {
         position: relative;
+        background: #ffffee;
     }
     header {
         position: fixed;
@@ -25,13 +26,14 @@
         z-index: 2;
     }
     header div {
-        margin: 20px auto;
+        margin: 0 auto;
+        padding-top: 20px;
         width: 104px;
     }
 
     @media (min-width: 768px) {
         .header-container {
-            margin: 20px auto 0;
+            margin: 0 auto;
             width: 80vw;
         }
         header {

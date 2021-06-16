@@ -37,7 +37,12 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  background: #FFFFEF;
+  background: #16688c;
+}
+
+#svelte {
+    background: #16688c;
+    min-height: 100vh;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */

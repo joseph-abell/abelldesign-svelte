@@ -6,7 +6,7 @@
 	 * @type {import('@sveltejs/kit').Load}
 	 */
 	export async function load({ fetch }) {
-        const data = await fetchData(fetch, query) || { services: []};
+        const data = await fetchData(fetch, query) || { services: [], servicesPages: []};
 
         if (data && data.services) {
             data.services = data.services.map((service, index) => {
@@ -17,8 +17,6 @@
             data.services = [];
         }
 
-        console.log(data.services);
-
         return { props: data };
   }
 </script>
@@ -27,8 +25,15 @@
     // @ts-nocheck
     import Container from '../components/atoms/Container.svelte';
     import List from '../components/molecules/List.svelte';
+    import Quote from '../components/molecules/Quote.svelte';
 
     export let services;
+    export let servicesPages;
+
+    let quote = servicesPages[0].quote;
+    let quoter = servicesPages[0].quoter;
+
+    console.log(quote, quoter);
 </script>
 
 <svelte:head>
@@ -38,5 +43,5 @@
 <Container>
     <List title='Services' data={services} />
 
-    <!-- <Quote quote={homepage[0].quote} quoter={homepage[0].quoter} /> -->
+    <Quote quote={quote} quoter={quoter} />
 </Container>

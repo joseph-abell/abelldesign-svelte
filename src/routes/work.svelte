@@ -25,8 +25,13 @@
     // @ts-nocheck
     import Container from '../components/atoms/Container.svelte';
     import List from '../components/molecules/List.svelte';
+    import Quote from '../components/molecules/Quote.svelte';
 
     export let works;
+    export let worksPages;
+
+    let quote = worksPages[0].quote;
+    let quoter = worksPages[0].quoter;
 </script>
 
 <svelte:head>
@@ -36,5 +41,5 @@
 <Container>
     <List title='Work' data={works} />
 
-    <!-- <Quote quote={homepage[0].quote} quoter={homepage[0].quoter} /> -->
+    <Quote quote={quote} quoter={quoter} />
 </Container>

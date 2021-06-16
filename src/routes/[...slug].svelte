@@ -14,6 +14,7 @@
 <script>
     import IntersectionObserver from '../components/atoms/IntersectionObserver.svelte';
     import Image from '../components/atoms/Image.svelte';
+    import Container from '../components/atoms/Container.svelte';
 </script>
 
-<div>Hi</div>
+<Container>Hi</Container>

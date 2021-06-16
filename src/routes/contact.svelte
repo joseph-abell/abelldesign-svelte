@@ -15,6 +15,7 @@
     // @ts-nocheck
         import IntersectionObserver from '../components/atoms/IntersectionObserver.svelte';
         import Image from '../components/atoms/Image.svelte';
+        import Container from '../components/atoms/Container.svelte';
     
         export let contacts;
         let {address, addressImage, instagramImage, instagramLink, phoneImage, phoneText, slug, title} = contacts[0];
@@ -23,3 +24,5 @@
 <svelte:head>
     <title>Contact - Abell Design</title>
 </svelte:head>
+
+<Container>Hi</Container>
