@@ -26,8 +26,7 @@ const fetchData = async (fetch, query: string, variables?: {id?: string, slug?: 
         })
     }
 
-    const { data, ...rest } = await response.json();
-    console.log(data, rest);
+    const { data } = await response.json();
     
     return data;
 }

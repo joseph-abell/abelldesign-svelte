@@ -32,8 +32,6 @@
 
     let quote = servicesPages[0].quote;
     let quoter = servicesPages[0].quoter;
-
-    console.log(quote, quoter);
 </script>
 
 <svelte:head>
