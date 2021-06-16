@@ -6,7 +6,6 @@
 	 * @type {import('@sveltejs/kit').Load}
 	 */
 	export async function load({ fetch, page }) {
-
         const data = await fetchData(fetch, query, { slug: page.params.slug });
         return { props: data };
   }
@@ -16,9 +15,11 @@
     import IntersectionObserver from '../../components/atoms/IntersectionObserver.svelte';
     import Image from '../../components/atoms/Image.svelte';
     import Container from '../../components/atoms/Container.svelte';
-
-    export let blogs;
-
 </script>
+
+<svelte:head>
+    <title>Abell Design</title>
+</svelte:head>
+
 
 <Container>Hi</Container>

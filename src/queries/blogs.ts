@@ -10,7 +10,6 @@ const blogs = `
                 url
             }
             featuredLinkText
-            featuredText
             image {
                 height
                 url

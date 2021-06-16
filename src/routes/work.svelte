@@ -39,7 +39,7 @@
 </svelte:head>
 
 <Container>
-    <List title='Work' data={works} />
+    <List title='Work' data={works} headerType='h1' />
 
     <Quote quote={quote} quoter={quoter} />
 </Container>

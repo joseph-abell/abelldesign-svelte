@@ -1,4 +1,8 @@
-<h1><slot /></h1>
+<h1 style={style}><slot /></h1>
+
+<script>
+    export let style = '';
+</script>
 
 <style>
     h1 {

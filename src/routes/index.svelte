@@ -7,7 +7,6 @@
 	 */
 	export async function load({ fetch }) {
         const data = await fetchData(fetch, query) || { works: [], services: [], homepage: [{}], brands: []};
-        console.log(data);
 
         if (data && data.works) {
             data.works = data.works && data.works.map((work, index) => {

@@ -17,4 +17,8 @@
     import Container from '../components/atoms/Container.svelte';
 </script>
 
+<svelte:head>
+    <title>Abell Design</title>
+</svelte:head>
+
 <Container>Hi</Container>

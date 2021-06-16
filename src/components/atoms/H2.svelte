@@ -1,4 +1,8 @@
-<h2><slot /></h2>
+<h2 style={style}><slot /></h2>
+
+<script>
+    export let style = '';
+</script>
 
 <style>
     h2 {
@@ -6,6 +10,6 @@
         line-height: 30px;
         color: #16688C;
         text-align: center;
-        margin: 20px 0;
+        padding: 20px 0;
     }
 </style>
