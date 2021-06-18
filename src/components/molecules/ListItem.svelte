@@ -5,12 +5,13 @@
     import IntersectionObserver from '../atoms/IntersectionObserver.svelte';
     import FullWidthMobileImage from '../atoms/FullWidthMobileImage.svelte';
     export let item;
+    export let slugPrefix;
 </script>
 
 <li>
     <a
         class={item.oddEven === 0 ? 'data-item-link row' : 'data-item-link row-reverse'}
-        href={`/${item.work && item.work.slug}`}
+        href={`${slugPrefix}/${item.slug}`}
         style="--flexDirection: {item.oddEven === 0 ? 'row' : 'row-reverse'}"
     >
         <div class='data-item-text'>

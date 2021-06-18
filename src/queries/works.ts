@@ -6,6 +6,7 @@ const works = `
       publishedAt
       title
       featuredDeck
+      slug
       featuredImage {
         url
         height

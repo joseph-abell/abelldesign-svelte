@@ -8,12 +8,12 @@
     
     <ContentList>
         {#each data as item (item.id)}
-            <ListItem {item} {slugPrefix} />
+            <ServiceListItem {item} />
         {/each}
         </ContentList>
 
     {#if linkText && linkText.length > 0}
-        <CenteredLink href={slug}>{linkText}</CenteredLink>
+        <CenteredLink href={`/work/${slug}`}>{linkText}</CenteredLink>
     {/if}
 </div>
 
@@ -21,13 +21,13 @@
     import ListH1 from '../atoms/ListH1.svelte';
     import H2 from '../atoms/H2.svelte';
     import ContentList from '../atoms/ContentList.svelte';
-    import ListItem from './ListItem.svelte';
+    import ServiceListItem from './ServiceListItem.svelte';
     import CenteredLink from '../atoms/CenteredLink.svelte';
 
     export let title;
     export let data;
+    console.log(data);
     export let slug = '';
     export let linkText = ''
     export let headerType = 'h2';
-    export let slugPrefix = '';
 </script>

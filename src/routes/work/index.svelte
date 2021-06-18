@@ -1,6 +1,6 @@
 <script context="module">
-    import fetchData from '../helpers/fetchData';
-    import query from '../queries/works';
+    import fetchData from '../../helpers/fetchData';
+    import query from '../../queries/works';
 
 	/**
 	 * @type {import('@sveltejs/kit').Load}
@@ -23,9 +23,9 @@
 
 <script>
     // @ts-nocheck
-    import Container from '../components/atoms/Container.svelte';
-    import List from '../components/molecules/List.svelte';
-    import Quote from '../components/molecules/Quote.svelte';
+    import Container from '../../components/atoms/Container.svelte';
+    import List from '../../components/molecules/List.svelte';
+    import Quote from '../../components/molecules/Quote.svelte';
 
     export let works;
     export let worksPages;
@@ -39,7 +39,7 @@
 </svelte:head>
 
 <Container>
-    <List title='Work' data={works} headerType='h1' />
+    <List title='Work' data={works} headerType='h1' slugPrefix='/work' />
 
     <Quote quote={quote} quoter={quoter} />
 </Container>

@@ -40,6 +40,8 @@
             height: initial;
             float: left;
             padding-left: 50px;
+            padding-top: 20px;
+            overflow: hidden;
         }
 
         ul {
