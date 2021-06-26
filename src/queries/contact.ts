@@ -1,6 +1,6 @@
 const contact = `
     query {
-        contacts {
+        contacts(first: 1) {
             id
             address
             addressImage {
@@ -20,6 +20,13 @@ const contact = `
             linkedInLink
             linkedInLinkText
             phoneImage {
+                height
+                url
+            }
+            emailTitle
+            emailLinkText
+            emailLink
+            emailImage {
                 height
                 url
             }

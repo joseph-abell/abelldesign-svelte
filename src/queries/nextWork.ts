@@ -33,6 +33,6 @@ const nextWork = `
             }
         }
     }
-`
+`;
 
 export default nextWork;

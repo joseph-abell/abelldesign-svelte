@@ -1,27 +1,24 @@
 const blog = `
-    query blog($id: String) {
-        blog(where: {id: $id}) {
-            id
+    query blog($slug: String) {
+        blog(where: {slug: $slug}) {
+            slug
             content {
-                html
+              html
             }
             featuredImage {
-                height
-                url
+              height
+              url
             }
             featuredLinkText
-            featuredText
-            image {
-                height
-                url
-            }
             quote
             quoteAuthor
-            slug
-            stage
             subtitle
             title
+            image {
+              height
+              url
+            }
         }
     }
-`
+`;
 export default blog;

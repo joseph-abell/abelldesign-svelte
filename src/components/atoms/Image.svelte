@@ -1,35 +1,41 @@
 <script>
-    import { onMount } from 'svelte';
+	import { onMount } from 'svelte';
 
-    export let src = ''
-    export let alt = ''
-    export let margin = '0';
-    export let height = 'auto';
+	export let src = '';
+	export let alt = '';
+	export let margin = '0';
+	export let height = 'auto';
 
-    let loaded = false;
-    let thisImage;
-    let heightPx = height !== 'auto' ? height + 'px' : 'auto';
+	let loaded = false;
+	let thisImage;
+	let heightPx = height !== 'auto' ? height + 'px' : 'auto';
 
-    onMount(() => {
-        thisImage.onload = () => {
-            loaded = true;
-        }
-        thisImage.src = src;
-        thisImage.alt = alt;
-    })
+	onMount(() => {
+		thisImage.onload = () => {
+			loaded = true;
+		};
+		thisImage.src = src;
+		thisImage.alt = alt;
+	});
 </script>
 
+<img
+	class:loaded
+	bind:this={thisImage}
+	{src}
+	{alt}
+	style="--height:{heightPx}; --margin:{margin}"
+/>
+
 <style>
-    img {
-        opacity: 0;
-        transition: opacity 300ms ease-out, height 300px ease-out;
-        height: var(--height);
-        margin: var(--margin);
-    }
+	img {
+		opacity: 0;
+		transition: opacity 300ms ease-out, height 300px ease-out;
+		height: var(--height);
+		margin: var(--margin);
+	}
 
-    img.loaded {
-        opacity: 1;
-    }
+	img.loaded {
+		opacity: 1;
+	}
 </style>
-
-<img class:loaded bind:this={thisImage} {src} {alt} style="--height:{heightPx}; --margin:{margin}" />

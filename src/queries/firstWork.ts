@@ -29,6 +29,6 @@ const firstWork = `
             quoteAuthor
         }
     }
-`
+`;
 
 export default firstWork;

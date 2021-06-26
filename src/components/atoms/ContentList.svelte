@@ -1,9 +1,9 @@
 <ul><slot /></ul>
 
 <style>
-    ul {
-        list-style: none;
-        margin: 0 0 20px 0;
-        padding: 0;
-    }
+	ul {
+		list-style: none;
+		margin: 0 0 20px 0;
+		padding: 0;
+	}
 </style>

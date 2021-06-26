@@ -40,6 +40,6 @@ query {
     slug
   }
 }
-`
+`;
 
 export default site;
