@@ -44,7 +44,6 @@
 							once={true}
 							let:intersecting
 							style="display: flex; align-items: center; justify-content: center;"
-							height="200px"
 						>
 							<Image src={blog.featuredImage.url} height="200" />
 						</IntersectionObserver>

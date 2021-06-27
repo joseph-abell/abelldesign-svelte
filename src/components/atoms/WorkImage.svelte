@@ -29,14 +29,13 @@
 	bind:this={thisImage}
 	{src}
 	{alt}
-	style="--height:{heightPx}; --margin:{margin}"
+	style="--margin:{margin}"
 />
 
 <style>
 	img {
 		opacity: 0;
 		transition: opacity 300ms ease-out, height 300px ease-out;
-		height: var(--height);
 		margin: var(--margin);
 	}
 

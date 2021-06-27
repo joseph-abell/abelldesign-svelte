@@ -10,6 +10,6 @@
 		line-height: 30px;
 		color: #16688c;
 		text-align: center;
-		margin: 20px 0;
+		margin: 20px 0 40px;
 	}
 </style>

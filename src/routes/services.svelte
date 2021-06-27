@@ -1,6 +1,6 @@
 <script context="module">
-	import fetchData from '../../helpers/fetchData';
-	import query from '../../queries/services';
+	import fetchData from '../helpers/fetchData';
+	import query from '../queries/services';
 
 	/**
 	 * @type {import('@sveltejs/kit').Load}
@@ -24,9 +24,9 @@
 
 <script>
 	// @ts-nocheck
-	import Container from '../../components/atoms/Container.svelte';
-	import ServiceList from '../../components/molecules/ServiceList.svelte';
-	import Quote from '../../components/molecules/Quote.svelte';
+	import Container from '../components/atoms/Container.svelte';
+	import ServiceList from '../components/molecules/ServiceList.svelte';
+	import Quote from '../components/molecules/Quote.svelte';
 
 	export let services;
 	export let servicesPages;

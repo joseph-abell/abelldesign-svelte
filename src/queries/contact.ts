@@ -34,6 +34,10 @@ const contact = `
             slug
             title
             updatedAt
+            map {
+                longitude
+                latitude
+            }
         }
     }
 `;

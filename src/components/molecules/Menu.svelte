@@ -1,5 +1,5 @@
 <script>
-	import A from '../atoms/A.svelte';
+    import ButtonAsLink from '../atoms/ButtonAsLink.svelte';
 	export let menu;
 	export let menuOpen;
 </script>
@@ -8,14 +8,9 @@
 	<ul>
 		{#each menu as menuItem (menuItem.slug)}
 			<li>
-				<A
-					href={menuItem.slug.length > 1 ? `/${menuItem.slug}` : menuItem.slug}
-					display="block"
-					padding="30px 0"
-					color="rgba(0, 0, 0, 0.8)"
-				>
+				<ButtonAsLink slug={menuItem.slug} {menuOpen}>
 					{menuItem.text}
-				</A>
+                </ButtonAsLink>
 			</li>
 		{/each}
 	</ul>

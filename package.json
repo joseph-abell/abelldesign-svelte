@@ -27,5 +27,8 @@
 		"typescript": "^4.0.0"
 	},
 	"type": "module",
-	"dependencies": {}
+	"dependencies": {
+		"google-map-react": "^2.1.10",
+		"svelte-google-maps-embed": "^0.1.1"
+	}
 }

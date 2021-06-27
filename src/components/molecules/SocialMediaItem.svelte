@@ -5,9 +5,8 @@
 
 	export let image = '';
 	export let text = '';
-	export let link;
+	export let link = '';
 	export let alt = '';
-	export let height;
 </script>
 
 <li>
@@ -16,7 +15,7 @@
 			<div class="imageContainer">
 				<IntersectionObserver once={true} let:intersecting>
 					{#if intersecting}
-						<Image src={image} {alt} {height} />
+						<Image src={image} {alt}/>
 					{/if}
 				</IntersectionObserver>
 			</div>
@@ -26,8 +25,12 @@
 	{:else}
 		<div class="flex">
 			<div class="imageContainer">
-				<IntersectionObserver once={true} let:intersecting style="display: flex;">
-					<Image src={image} {alt} {height} />
+				<IntersectionObserver
+                    once={true}
+                    let:intersecting
+                    style="display: flex;"
+                >
+					<Image src={image} {alt} />
 				</IntersectionObserver>
 			</div>
 

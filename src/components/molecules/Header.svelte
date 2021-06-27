@@ -46,6 +46,7 @@
 	header div {
 		margin: 0 auto;
 		padding-top: 20px;
+        padding-bottom: 20px;
 		width: 104px;
 	}
 

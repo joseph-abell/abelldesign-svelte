@@ -25,11 +25,15 @@
 </script>
 
 <script>
-	import Image from '../../components/atoms/Image.svelte';
+	import WorkImage from '../../components/atoms/WorkImage.svelte';
 	import IntersectionObserver from '../../components/atoms/IntersectionObserver.svelte';
 	import Container from '../../components/atoms/Container.svelte';
 	import ListH1 from '../../components/atoms/ListH1.svelte';
+    import WorkPrimaryImages from '../../components/atoms/WorkPrimaryImages.svelte';
+    import WorkPrimaryImage from '../../components/atoms/WorkPrimaryImage.svelte';
+    import WorkMain from '../../components/atoms/WorkMain.svelte';
 	import Quote from '../../components/molecules/Quote.svelte';
+    import MoreWork from '../../components/atoms/MoreWork.svelte';
 
 	export let work;
 	export let next;
@@ -41,48 +45,53 @@
 
 <Container>
 	<ListH1>{work.title}</ListH1>
-	<ul>
+	<WorkPrimaryImages>
 		{#each work.images as image (image.url)}
-			<li>
-				<IntersectionObserver
-					once={true}
-					let:intersecting
-					style="display: flex; align-items: center; justify-content: center;"
-				>
-					<Image src={image.url} height={image.url} />
-				</IntersectionObserver>
-			</li>
+			<WorkPrimaryImage>
+                <IntersectionObserver
+                    once={true}
+                    let:intersecting
+                    style="display: flex; align-items: center; justify-content: center;"
+                >
+				    <WorkImage src={image.url} height="400" />
+                </IntersectionObserver>
+			</WorkPrimaryImage>
 		{/each}
-	</ul>
-	<p>{work.subtitle}</p>
-	<div>
-		{@html work.content.html}
-	</div>
-	<Quote quote={work.quote} quoter={work.quoteAuthor} />
-	<ul>
-		{#each work.secondaryImages as image (image.url)}
-			<li>
-				<IntersectionObserver
-					once={true}
-					let:intersecting
-					style="display: flex; align-items: center; justify-content: center;"
-				>
-					<Image src={image.url} height={image.height} />
-				</IntersectionObserver>
-			</li>
-		{/each}
-	</ul>
-	<div>
-		<a href={next.slug}>
-			<h3>More Work:</h3>
-			<p>{next.title}</p>
-			<IntersectionObserver
-				once={true}
-				let:intersecting
-				style="display: flex; align-items: center; justify-content: center;"
-			>
-				<Image src={next.featuredImage.url} height={next.featuredImage.height} />
-			</IntersectionObserver>
-		</a>
-	</div>
+    </WorkPrimaryImages>
+
+    <WorkMain>
+        <p class='subtitle'>{work.subtitle}</p>
+        <div class='markdown'>
+            {@html work.content.html}
+        </div>
+        {#if (work.quote && work.quote.length > 0)}
+            <Quote quote={work.quote} quoter={work.quoteAuthor} />
+        {/if}
+        <WorkPrimaryImages>
+            {#each work.secondaryImages as image (image.url)}
+                <WorkPrimaryImage>
+                    <IntersectionObserver
+                        once={true}
+                        let:intersecting
+                        style="display: flex; align-items: center; justify-content: center;"
+                    >
+                        <WorkImage src={image.url} height="400" />
+                    </IntersectionObserver>
+                </WorkPrimaryImage>
+            {/each}
+        </WorkPrimaryImages>
+        <MoreWork {next} />
+    </WorkMain>
+
 </Container>
+
+<style>
+    .subtitle {
+        color: #16688c;
+        margin-bottom: 1em;
+    }
+
+    .markdown :global(p) {
+        margin-bottom: 1em;
+    }
+</style>
