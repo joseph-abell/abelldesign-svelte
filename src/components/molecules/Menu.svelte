@@ -52,7 +52,7 @@
 			height: initial;
 			float: left;
 			padding-left: 50px;
-			padding-top: 20px;
+			padding-top: 0;
 			overflow: hidden;
 		}
 

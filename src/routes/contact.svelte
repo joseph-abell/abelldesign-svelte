@@ -13,12 +13,13 @@
 
 <script>
 	// @ts-nocheck
-    import Maps from 'svelte-google-maps-embed';
     import IntersectionObserver from '../components/atoms/IntersectionObserver.svelte';
 	import Image from '../components/atoms/Image.svelte';
 	import Container from '../components/atoms/Container.svelte';
 	import ListH1 from '../components/atoms/ListH1.svelte';
 	import A from '../components/atoms/A.svelte';
+    import Map from '../components/atoms/Map.svelte';
+    import MapMarker from '../components/atoms/MapMarker.svelte';
 
 	export let contacts;
 	let {
@@ -37,7 +38,8 @@
 		emailLinkText,
 		emailImage,
 		title,
-        map
+        map,
+        mapZoom
 	} = contacts[0];
 </script>
 
@@ -103,7 +105,9 @@
                 </div>
             </li>
         </ul>
-        <Maps apiKey="AIzaSyDDwiQ8OPTm6Km78-lpjBmo61uKfmXVVDE" mapMode="view" center={`${map.latitude},${map.longitude}`} zoom="18" maptype="satellite" />
+        <Map lat={map.latitude} lon={map.longitude} zoom={mapZoom}>
+            <MapMarker lat={map.latitude} lon={map.longitude} label="Abell Design" />
+        </Map>
     </div>
 </Container>
 
@@ -118,10 +122,14 @@
         margin-right: 20px;
     }
 
+    .contact-container {
+        margin-bottom: 40px;
+    }
     @media (min-width: 768px) {
         .contact-container {
-            display: flex;
-            align-items: stretch;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 20px;
         }
     }
 </style>
