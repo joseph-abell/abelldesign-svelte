@@ -7,7 +7,7 @@ const fetchData = async (
 
 	if (variables) {
 		response = await fetch(
-			'https://api-eu-central-1.graphcms.com/v2/ckouf3olwcb6r01z1db541r29/master',
+			'https://abelldesign.graphcdn.app',
 			{
 				method: 'POST',
 				headers: {
@@ -22,7 +22,7 @@ const fetchData = async (
 		);
 	} else {
 		response = await fetch(
-			'https://api-eu-central-1.graphcms.com/v2/ckouf3olwcb6r01z1db541r29/master',
+			'https://abelldesign.graphcdn.app',
 			{
 				method: 'POST',
 				headers: {
