@@ -44,6 +44,7 @@
 	import Quote from '../components/molecules/Quote.svelte';
 	import Intro from '../components/molecules/Intro.svelte';
 	import List from '../components/molecules/List.svelte';
+    import Services from '../components/molecules/Services.svelte';
 	import Brands from '../components/molecules/Brands.svelte';
 
 	export let homepage;
@@ -58,8 +59,8 @@
 
 <Container>
 	<Intro {homepage} />
-	<List title="Services" data={services} link="/services" linkText="More Services" />
-	<List title="Work" data={works} link="/work" linkText="More Work" />
+	<Services title="Services" data={services} slugPrefix="/work" linkText="More Services" />
+	<List title="Work" data={works} slugPrefix="/work" linkText="More Work" />
 	<Brands {brands} brandsText={homepage[0].brandsText} />
 	<Quote quote={homepage[0].quote} quoter={homepage[0].quoter} />
 </Container>
