@@ -1,7 +1,5 @@
 <script>
-	import Image from '../atoms/Image.svelte';
 	import FooterA from '../atoms/FooterA.svelte';
-	import IntersectionObserver from '../atoms/IntersectionObserver.svelte';
 
 	export let image = '';
 	export let text = '';
@@ -13,11 +11,7 @@
 	{#if !!link}
 		<a href={link}>
 			<div class="imageContainer">
-				<IntersectionObserver once={true} let:intersecting>
-					{#if intersecting}
-						<Image src={image} {alt}/>
-					{/if}
-				</IntersectionObserver>
+						<img src={image} {alt}/>
 			</div>
 
 			<FooterA>{text}</FooterA>
@@ -25,13 +19,9 @@
 	{:else}
 		<div class="flex">
 			<div class="imageContainer">
-				<IntersectionObserver
-                    once={true}
-                    let:intersecting
-                    style="display: flex;"
-                >
-					<Image src={image} {alt} />
-				</IntersectionObserver>
+				<div style="display: flex;">
+					<img src={image} {alt} />
+                </div>
 			</div>
 
 			<div>{text}</div>

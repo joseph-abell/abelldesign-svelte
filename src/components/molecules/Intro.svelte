@@ -1,10 +1,7 @@
 <script>
 	import IntroText from '../atoms/IntroText.svelte';
-	import H1 from '../atoms/H1.svelte';
-	import HeaderParagraph from '../atoms/HeaderParagraph.svelte';
 	import A from '../atoms/A.svelte';
 	import IntroImage from '../atoms/IntroImage.svelte';
-	import IntersectionObserver from '../atoms/IntersectionObserver.svelte';
 	import FullWidthMobileImage from '../atoms/FullWidthMobileImage.svelte';
 
 	export let homepage;
@@ -17,15 +14,11 @@
 	</IntroText>
 
 	<IntroImage>
-		<IntersectionObserver once={true} let:intersecting>
-			{#if intersecting}
-				<FullWidthMobileImage
-					alt=""
-					src={homepage[0].image.url}
-					height={homepage[0].image.height}
-				/>
-			{/if}
-		</IntersectionObserver>
+        <FullWidthMobileImage
+            alt=""
+            src={homepage[0].image.url}
+            height={homepage[0].image.height}
+        />
 	</IntroImage>
 </div>
 

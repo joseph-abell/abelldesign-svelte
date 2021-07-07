@@ -26,7 +26,6 @@
 
 <script>
 	import WorkImage from '../../components/atoms/WorkImage.svelte';
-	import IntersectionObserver from '../../components/atoms/IntersectionObserver.svelte';
 	import Container from '../../components/atoms/Container.svelte';
 	import ListH1 from '../../components/atoms/ListH1.svelte';
     import WorkPrimaryImages from '../../components/atoms/WorkPrimaryImages.svelte';
@@ -48,13 +47,9 @@
 	<WorkPrimaryImages>
 		{#each work.images as image (image.url)}
 			<WorkPrimaryImage>
-                <IntersectionObserver
-                    once={true}
-                    let:intersecting
-                    style="display: flex; align-items: center; justify-content: center;"
-                >
+                <div style="display: flex; align-items: center; justify-content: center;">
 				    <WorkImage src={image.url} height="400" />
-                </IntersectionObserver>
+                </div>
 			</WorkPrimaryImage>
 		{/each}
     </WorkPrimaryImages>
@@ -70,13 +65,11 @@
         <WorkPrimaryImages>
             {#each work.secondaryImages as image (image.url)}
                 <WorkPrimaryImage>
-                    <IntersectionObserver
-                        once={true}
-                        let:intersecting
+                    <div
                         style="display: flex; align-items: center; justify-content: center;"
                     >
                         <WorkImage src={image.url} height="400" />
-                    </IntersectionObserver>
+                </div>
                 </WorkPrimaryImage>
             {/each}
         </WorkPrimaryImages>

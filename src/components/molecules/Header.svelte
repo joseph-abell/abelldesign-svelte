@@ -1,6 +1,4 @@
 <script lang="typescript">
-	import Image from '../atoms/Image.svelte';
-	import IntersectionObserver from '../atoms/IntersectionObserver.svelte';
 	import Menu from './Menu.svelte';
 	import MenuButton from '../atoms/MenuButton.svelte';
 
@@ -16,13 +14,9 @@
 <div class="header-container">
 	<header>
 		<div>
-			<IntersectionObserver once={true} let:intersecting>
-				{#if intersecting}
-					<a href={`${menu[0].slug}`}>
-						<Image {alt} {src} height="50" />
-					</a>
-				{/if}
-			</IntersectionObserver>
+            <a href={`${menu[0].slug}`}>
+                <img {alt} {src} />
+            </a>
 		</div>
 
 		<MenuButton {onClick} {menuOpen} />

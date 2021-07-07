@@ -15,8 +15,6 @@
 	import ListH1 from '../../components/atoms/ListH1.svelte';
 	import H2 from '../../components/atoms/H2.svelte';
 	import Container from '../../components/atoms/Container.svelte';
-	import IntersectionObserver from '../../components/atoms/IntersectionObserver.svelte';
-	import Image from '../../components/atoms/Image.svelte';
 	import Quote from '../../components/molecules/Quote.svelte';
 
 	export let blog;
@@ -29,13 +27,11 @@
 <Container>
 	<ListH1>{blog.title}</ListH1>
 	{#if blog.image}
-		<IntersectionObserver
-			once={true}
-			let:intersecting
+		<div
 			style="display: flex; align-items: center; justify-content: center;"
 		>
-			<Image src={blog.image.url} height={blog.image.height} />
-		</IntersectionObserver>
+			<img src={blog.image.url} alt="" />
+</div>
 	{/if}
 	<H2>{blog.subtitle}</H2>
 	<div>

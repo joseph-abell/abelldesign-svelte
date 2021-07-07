@@ -1,7 +1,5 @@
 <script>
 	import H2 from '../atoms/H2.svelte';
-	import IntersectionObserver from '../atoms/IntersectionObserver.svelte';
-	import Image from '../atoms/Image.svelte';
 	export let brands;
 	export let brandsText;
 </script>
@@ -12,15 +10,9 @@
 	<ul class="brand-list">
 		{#each brands as brand (brand.id)}
 			<li>
-				<IntersectionObserver
-					once={true}
-					let:intersecting
-					style="display: flex; align-items: center; justify-content: center;"
-				>
-					{#if intersecting}
-						<Image alt="" src={brand.image.url} margin="0 auto 20px" />
-					{/if}
-				</IntersectionObserver>
+				<div style="display: flex; align-items: center; justify-content: center;">
+                    <img alt="" src={brand.image.url} style="margin: 0 auto 20px" />
+                </div>
 			</li>
 		{/each}
 	</ul>

@@ -19,8 +19,6 @@
 </script>
 
 <script>
-	import IntersectionObserver from '../../components/atoms/IntersectionObserver.svelte';
-	import Image from '../../components/atoms/Image.svelte';
 	import Container from '../../components/atoms/Container.svelte';
 	import ListH1 from '../../components/atoms/ListH1.svelte';
 	import H2 from '../../components/atoms/H2.svelte';
@@ -40,13 +38,11 @@
 			<li class="blog-list-item">
 				<a href={`/blog/${blog.slug}`}>
 					<div style="height: 200px">
-						<IntersectionObserver
-							once={true}
-							let:intersecting
+						<div
 							style="display: flex; align-items: center; justify-content: center;"
 						>
-							<Image src={blog.featuredImage.url} height="200" />
-						</IntersectionObserver>
+							<img src={blog.featuredImage.url} alt="" />
+                    </div>
 					</div>
 
 					<H2 style="text-align: left;">{blog.title}</H2>

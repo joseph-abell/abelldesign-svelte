@@ -4,8 +4,6 @@
 	import ContentListItem from '../atoms/ContentListItem.svelte';
 	import SpanAsLink from '../atoms/SpanAsLink.svelte';
 	import P from '../atoms/P.svelte';
-	import IntersectionObserver from '../atoms/IntersectionObserver.svelte';
-	import Image from '../atoms/Image.svelte';
 	import CenteredLink from '../atoms/CenteredLink.svelte';
 
 	export let works;
@@ -23,11 +21,7 @@
 					</div>
 
 					<div class="work-image">
-						<IntersectionObserver once={true} let:intersecting>
-							{#if intersecting}
-								<Image alt="" src={work.featuredImage.url} height="150px" />
-							{/if}
-						</IntersectionObserver>
+                        <img alt="" src={work.featuredImage.url} />
 					</div>
 				</a>
 			</ContentListItem>

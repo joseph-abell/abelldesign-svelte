@@ -13,8 +13,6 @@
 
 <script>
 	// @ts-nocheck
-    import IntersectionObserver from '../components/atoms/IntersectionObserver.svelte';
-	import Image from '../components/atoms/Image.svelte';
 	import Container from '../components/atoms/Container.svelte';
 	import ListH1 from '../components/atoms/ListH1.svelte';
 	import A from '../components/atoms/A.svelte';
@@ -53,9 +51,7 @@
         <ul>
             <li>
                 <div class='image'>
-                    <IntersectionObserver>
-                        <Image height={50} src={emailImage.url} />
-                    </IntersectionObserver>
+                        <img src={emailImage.url} alt="" />
                 </div>
                 <div class='text'>
                     {emailTitle}
@@ -64,9 +60,7 @@
             </li>
             <li>
                 <div class='image'>
-                    <IntersectionObserver>
-                        <Image height={50} src={phoneImage.url} />
-                    </IntersectionObserver>
+                        <img src={phoneImage.url}  alt=""/>
                 </div>
                 <div class='text'>
                     {phoneText}
@@ -75,9 +69,7 @@
             </li>
             <li>
                 <div class='image'>
-                    <IntersectionObserver>
-                        <Image height={50} src={addressImage.url} />
-                    </IntersectionObserver>
+                        <img src={addressImage.url} alt="" />
                 </div>
                 <div class='text'>
                     {address}
@@ -85,9 +77,7 @@
             </li>
             <li>
                 <div class='image'>
-                    <IntersectionObserver>
-                        <Image height={50} src={linkedInImage.url} />
-                    </IntersectionObserver>
+                        <img  src={linkedInImage.url} alt="" />
                 </div>
                 <div class='text'>
                     <A href={linkedInLink}>{linkedInLinkText}</A>
@@ -96,9 +86,7 @@
             </li>
             <li>
                 <div class='image'>
-                    <IntersectionObserver>
-                        <Image height={50} src={instagramImage.url} />
-                    </IntersectionObserver>
+                        <img src={instagramImage.url} alt="" />
                 </div>
                 <div class='text'>
                     <A href={instagramLink}>{instagramLinkText}</A>

@@ -6,19 +6,13 @@
             <SpanAsLink width='120px'>Read More ></SpanAsLink>
         </div>
         
-        <IntersectionObserver
-            once={true}
-            let:intersecting
-            style="display: flex; align-items: center; justify-content: center;"
-        >
-            <Image src={next.featuredImage.url} height={next.featuredImage.height} />
-        </IntersectionObserver>
+        <div class="image-container">
+            <img src={next.featuredImage.url} alt="" />
+        </div>
     </a>
 </div>
 
 <script>
-    import IntersectionObserver from './IntersectionObserver.svelte';
-    import Image from './Image.svelte';
     import SpanAsLink from './SpanAsLink.svelte';
 
     export let next;
@@ -43,6 +37,12 @@
     .more-work-text {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+    }
+
+    .image-container {
+        display: flex;
+        align-items: center;
         justify-content: center;
     }
 </style>

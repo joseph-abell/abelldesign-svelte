@@ -1,6 +1,5 @@
 <script lang="typescript">
 	import SocialMediaItem from './SocialMediaItem.svelte';
-	import IntersectionObserver from '../atoms/IntersectionObserver.svelte';
 	import FooterLogoContainer from '../atoms/FooterLogoContainer.svelte';
 	import FooterImage from '../atoms/FooterImage.svelte';
 
@@ -50,9 +49,9 @@
 		</ul>
 		<div>
 			<FooterLogoContainer>
-				<IntersectionObserver style="display: flex; align-items: center; justify-content: center;">
+				<div style="display: flex; align-items: center; justify-content: center;">
 					<FooterImage src={footer.footerLogoImage.url} height="24" alt="" />
-				</IntersectionObserver>
+                </div>
 			</FooterLogoContainer>
 		</div>
 	</div>
