@@ -16,7 +16,7 @@
 	>
 		<div class="data-item-text">
 			<h3>{item.title}</h3>
-			<P>{item.featuredDeck} <SpanAsLink>{item.featuredLinkText}</SpanAsLink></P>
+			<p>{item.featuredDeck} <SpanAsLink>{item.featuredLinkText}</SpanAsLink></p>
 		</div>
 
 		{#if item.featuredImage.url}
@@ -50,6 +50,10 @@
         line-height: 22px;
         color: #16688c;
         padding: 0 0 20px;
+    }
+
+    p {
+        color: rgba(0, 0, 0, 0.9);
     }
 
 	@media (min-width: 768px) {
