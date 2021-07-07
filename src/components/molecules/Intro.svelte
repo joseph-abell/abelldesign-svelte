@@ -2,7 +2,6 @@
 	import IntroText from '../atoms/IntroText.svelte';
 	import A from '../atoms/A.svelte';
 	import IntroImage from '../atoms/IntroImage.svelte';
-	import FullWidthMobileImage from '../atoms/FullWidthMobileImage.svelte';
 
 	export let homepage;
 </script>
@@ -14,7 +13,7 @@
 	</IntroText>
 
 	<IntroImage>
-		<FullWidthMobileImage alt="" src={homepage[0].image.url} height={homepage[0].image.height} />
+		<img alt="" src={homepage[0].image.url} />
 	</IntroImage>
 </div>
 

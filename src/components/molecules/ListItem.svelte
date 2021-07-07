@@ -1,6 +1,5 @@
 <script>
 	import SpanAsLink from '../atoms/SpanAsLink.svelte';
-	import FullWidthMobileImage from '../atoms/FullWidthMobileImage.svelte';
 	export let item;
 	export let slugPrefix;
 </script>
@@ -19,7 +18,7 @@
 		{#if item.featuredImage.url}
 			<div>
 				<div style="display: flex; align-items: center; justify-content: center;">
-					<FullWidthMobileImage alt="" src={item.featuredImage.url} height="300" />
+					<img alt="" src={item.featuredImage.url} />
 				</div>
 			</div>
 		{/if}

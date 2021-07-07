@@ -38,6 +38,7 @@ query {
   menu: menus {
     text
     slug
+    order
   }
 }
 `;

@@ -15,9 +15,12 @@
 	import Header from '../components/molecules/Header.svelte';
 	import Footer from '../components/molecules/Footer.svelte';
 	import WhiteBackground from '../components/atoms/WhiteBackground.svelte';
+
 	export let headers = [];
 	export let footers = [];
 	export let menu = [];
+
+	menu = menu.sort((a, b) => a.order - b.order);
 
 	let header = headers[0];
 	let footer = footers[0];

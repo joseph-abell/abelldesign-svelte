@@ -2,7 +2,6 @@
 	import H3 from '../atoms/H3.svelte';
 	import P from '../atoms/P.svelte';
 	import A from '../atoms/A.svelte';
-	import FullWidthMobileImage from '../atoms/FullWidthMobileImage.svelte';
 	export let item;
 </script>
 
@@ -16,7 +15,7 @@
 	{#if item.featuredImage.url}
 		<div>
 			<div style="display: flex; align-items: center; justify-content: center;">
-				<FullWidthMobileImage alt="" src={item.featuredImage.url} height="300" />
+				<img alt="" src={item.featuredImage.url} />
 			</div>
 		</div>
 	{/if}
