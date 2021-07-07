@@ -37,6 +37,9 @@
 	}
 
 	@media (min-width: 768px) {
+        div {
+            display: flex;
+        }
 		div::after {
 			clear: both;
 			content: ' ';

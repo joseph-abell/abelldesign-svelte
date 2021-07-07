@@ -15,7 +15,7 @@
 		style="--flexDirection: {item.oddEven === 0 ? 'row' : 'row-reverse'}"
 	>
 		<div class="data-item-text">
-			<H3>{item.title}</H3>
+			<h3>{item.title}</h3>
 			<P>{item.featuredDeck} <SpanAsLink>{item.featuredLinkText}</SpanAsLink></P>
 		</div>
 
@@ -45,6 +45,13 @@
 		margin-bottom: 40px;
 	}
 
+    h3 {
+        font-size: 18px;
+        line-height: 22px;
+        color: #16688c;
+        padding: 0 0 20px;
+    }
+
 	@media (min-width: 768px) {
 		.data-item-link {
 			padding: 0;
@@ -58,6 +65,10 @@
 		.data-item-text {
 			flex-grow: 1;
             width: calc(100% - 500px);
+            display: flex;
+            flex-direction: column;
+            height: 343px;
+            justify-content: center;
 		}
 
 		.row .data-item-text {
