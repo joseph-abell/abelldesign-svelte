@@ -8,10 +8,10 @@
 			width: calc(100% - 500px);
 			float: left;
 			margin-right: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            height: 346px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			height: 346px;
 		}
 	}
 </style>

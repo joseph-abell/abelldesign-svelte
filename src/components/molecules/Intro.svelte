@@ -14,11 +14,7 @@
 	</IntroText>
 
 	<IntroImage>
-        <FullWidthMobileImage
-            alt=""
-            src={homepage[0].image.url}
-            height={homepage[0].image.height}
-        />
+		<FullWidthMobileImage alt="" src={homepage[0].image.url} height={homepage[0].image.height} />
 	</IntroImage>
 </div>
 
@@ -28,19 +24,19 @@
 	}
 
 	@media (min-width: 768px) {
-        h1 {
-            font-size: 36px;
-            line-height: 50px;
-            margin-bottom: 15px;
-        }
+		h1 {
+			font-size: 36px;
+			line-height: 50px;
+			margin-bottom: 15px;
+		}
 
-        p {
-            font-size: 18px;
-            line-height: 30px;
-        }
-        div {
-            display: flex;
-        }
+		p {
+			font-size: 18px;
+			line-height: 30px;
+		}
+		div {
+			display: flex;
+		}
 		div::after {
 			clear: both;
 			content: ' ';

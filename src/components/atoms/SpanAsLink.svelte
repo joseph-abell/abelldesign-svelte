@@ -1,3 +1,7 @@
+<script>
+	export let width = 'auto';
+</script>
+
 <span style={`--width: ${width}`}><slot /></span>
 
 <style>
@@ -6,7 +10,7 @@
 		text-decoration: none;
 		display: inline-block;
 		position: relative;
-        width: var(--width);
+		width: var(--width);
 	}
 
 	span::before {
@@ -28,7 +32,3 @@
 		transform: scale3d(1, 1, 1);
 	}
 </style>
-
-<script>
-    export let width = 'auto';
-</script>

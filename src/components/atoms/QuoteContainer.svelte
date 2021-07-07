@@ -8,11 +8,10 @@
 		margin-bottom: 60px;
 	}
 
-    @media (min-width: 768px) {
-        div {
-            width: 50%;
-            margin: 0 auto 60px;
-        }
-
-    }
+	@media (min-width: 768px) {
+		div {
+			width: 50%;
+			margin: 0 auto 60px;
+		}
+	}
 </style>

@@ -38,7 +38,7 @@
 
 <div bind:this={container}>
 	{#if map}
-		<slot></slot>
+		<slot />
 	{/if}
 </div>
 

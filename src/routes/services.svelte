@@ -24,7 +24,7 @@
 <script>
 	// @ts-nocheck
 	import Container from '../components/atoms/Container.svelte';
-	import ServiceList from '../components/molecules/ServiceList.svelte';
+	import Services from '../components/molecules/Services.svelte';
 	import Quote from '../components/molecules/Quote.svelte';
 
 	export let services;
@@ -39,7 +39,6 @@
 </svelte:head>
 
 <Container>
-	<ServiceList title="Services" data={services} headerType="h1" />
-
+	<Services title="Services" data={services} slugPrefix="/work" linkText="" />
 	<Quote {quote} {quoter} />
 </Container>

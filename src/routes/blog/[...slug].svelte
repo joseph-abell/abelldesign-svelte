@@ -27,11 +27,9 @@
 <Container>
 	<ListH1>{blog.title}</ListH1>
 	{#if blog.image}
-		<div
-			style="display: flex; align-items: center; justify-content: center;"
-		>
+		<div style="display: flex; align-items: center; justify-content: center;">
 			<img src={blog.image.url} alt="" />
-</div>
+		</div>
 	{/if}
 	<H2>{blog.subtitle}</H2>
 	<div>

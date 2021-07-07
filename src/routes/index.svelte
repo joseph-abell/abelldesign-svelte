@@ -44,7 +44,7 @@
 	import Quote from '../components/molecules/Quote.svelte';
 	import Intro from '../components/molecules/Intro.svelte';
 	import List from '../components/molecules/List.svelte';
-    import Services from '../components/molecules/Services.svelte';
+	import Services from '../components/molecules/Services.svelte';
 	import Brands from '../components/molecules/Brands.svelte';
 
 	export let homepage;

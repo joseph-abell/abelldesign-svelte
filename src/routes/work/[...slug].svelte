@@ -28,11 +28,11 @@
 	import WorkImage from '../../components/atoms/WorkImage.svelte';
 	import Container from '../../components/atoms/Container.svelte';
 	import ListH1 from '../../components/atoms/ListH1.svelte';
-    import WorkPrimaryImages from '../../components/atoms/WorkPrimaryImages.svelte';
-    import WorkPrimaryImage from '../../components/atoms/WorkPrimaryImage.svelte';
-    import WorkMain from '../../components/atoms/WorkMain.svelte';
+	import WorkPrimaryImages from '../../components/atoms/WorkPrimaryImages.svelte';
+	import WorkPrimaryImage from '../../components/atoms/WorkPrimaryImage.svelte';
+	import WorkMain from '../../components/atoms/WorkMain.svelte';
 	import Quote from '../../components/molecules/Quote.svelte';
-    import MoreWork from '../../components/atoms/MoreWork.svelte';
+	import MoreWork from '../../components/atoms/MoreWork.svelte';
 
 	export let work;
 	export let next;
@@ -47,44 +47,41 @@
 	<WorkPrimaryImages>
 		{#each work.images as image (image.url)}
 			<WorkPrimaryImage>
-                <div style="display: flex; align-items: center; justify-content: center;">
-				    <WorkImage src={image.url} height="400" />
-                </div>
+				<div style="display: flex; align-items: center; justify-content: center;">
+					<WorkImage src={image.url} height="400" />
+				</div>
 			</WorkPrimaryImage>
 		{/each}
-    </WorkPrimaryImages>
+	</WorkPrimaryImages>
 
-    <WorkMain>
-        <p class='subtitle'>{work.subtitle}</p>
-        <div class='markdown'>
-            {@html work.content.html}
-        </div>
-        {#if (work.quote && work.quote.length > 0)}
-            <Quote quote={work.quote} quoter={work.quoteAuthor} />
-        {/if}
-        <WorkPrimaryImages>
-            {#each work.secondaryImages as image (image.url)}
-                <WorkPrimaryImage>
-                    <div
-                        style="display: flex; align-items: center; justify-content: center;"
-                    >
-                        <WorkImage src={image.url} height="400" />
-                </div>
-                </WorkPrimaryImage>
-            {/each}
-        </WorkPrimaryImages>
-        <MoreWork {next} />
-    </WorkMain>
-
+	<WorkMain>
+		<p class="subtitle">{work.subtitle}</p>
+		<div class="markdown">
+			{@html work.content.html}
+		</div>
+		{#if work.quote && work.quote.length > 0}
+			<Quote quote={work.quote} quoter={work.quoteAuthor} />
+		{/if}
+		<WorkPrimaryImages>
+			{#each work.secondaryImages as image (image.url)}
+				<WorkPrimaryImage>
+					<div style="display: flex; align-items: center; justify-content: center;">
+						<WorkImage src={image.url} height="400" />
+					</div>
+				</WorkPrimaryImage>
+			{/each}
+		</WorkPrimaryImages>
+		<MoreWork {next} />
+	</WorkMain>
 </Container>
 
 <style>
-    .subtitle {
-        color: #16688c;
-        margin-bottom: 1em;
-    }
+	.subtitle {
+		color: #16688c;
+		margin-bottom: 1em;
+	}
 
-    .markdown :global(p) {
-        margin-bottom: 1em;
-    }
+	.markdown :global(p) {
+		margin-bottom: 1em;
+	}
 </style>

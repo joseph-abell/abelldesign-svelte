@@ -11,8 +11,8 @@
 		{#each brands as brand (brand.id)}
 			<li>
 				<div style="display: flex; align-items: center; justify-content: center;">
-                    <img alt="" src={brand.image.url} style="margin: 0 auto 20px" />
-                </div>
+					<img alt="" src={brand.image.url} style="margin: 0 auto 20px" />
+				</div>
 			</li>
 		{/each}
 	</ul>

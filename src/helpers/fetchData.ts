@@ -6,34 +6,28 @@ const fetchData = async (
 	let response;
 
 	if (variables) {
-		response = await fetch(
-			'https://abelldesign.graphcdn.app',
-			{
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-					Accept: 'application/json'
-				},
-				body: JSON.stringify({
-					query,
-					variables
-				})
-			}
-		);
+		response = await fetch('https://abelldesign.graphcdn.app', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+				Accept: 'application/json'
+			},
+			body: JSON.stringify({
+				query,
+				variables
+			})
+		});
 	} else {
-		response = await fetch(
-			'https://abelldesign.graphcdn.app',
-			{
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-					Accept: 'application/json'
-				},
-				body: JSON.stringify({
-					query
-				})
-			}
-		);
+		response = await fetch('https://abelldesign.graphcdn.app', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+				Accept: 'application/json'
+			},
+			body: JSON.stringify({
+				query
+			})
+		});
 	}
 
 	const { data } = await response.json();

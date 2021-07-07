@@ -15,8 +15,8 @@
 
 	{#if item.featuredImage.url}
 		<div>
-            <div style="display: flex; align-items: center; justify-content: center;">
-                <FullWidthMobileImage alt="" src={item.featuredImage.url} height="300" />			
+			<div style="display: flex; align-items: center; justify-content: center;">
+				<FullWidthMobileImage alt="" src={item.featuredImage.url} height="300" />
 			</div>
 		</div>
 	{/if}

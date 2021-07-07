@@ -14,9 +14,9 @@
 <div class="header-container">
 	<header>
 		<div>
-            <a href={`${menu[0].slug}`}>
-                <img {alt} {src} />
-            </a>
+			<a href={`${menu[0].slug}`}>
+				<img {alt} {src} />
+			</a>
 		</div>
 
 		<MenuButton {onClick} {menuOpen} />
@@ -40,7 +40,7 @@
 	header div {
 		margin: 0 auto;
 		padding-top: 20px;
-        padding-bottom: 20px;
+		padding-bottom: 20px;
 		width: 104px;
 	}
 

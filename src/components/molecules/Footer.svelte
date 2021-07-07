@@ -29,11 +29,7 @@
 				link={footer.emailLink}
 				image={footer.emailImage.url}
 			/>
-			<SocialMediaItem
-				text={footer.phoneText}
-				link={null}
-				image={footer.phoneImage.url}
-			/>
+			<SocialMediaItem text={footer.phoneText} link={null} image={footer.phoneImage.url} />
 		</ul>
 		<ul>
 			<SocialMediaItem
@@ -50,8 +46,8 @@
 		<div>
 			<FooterLogoContainer>
 				<div style="display: flex; align-items: center; justify-content: center;">
-					<FooterImage src={footer.footerLogoImage.url} height="24" alt="" />
-                </div>
+					<FooterImage src={footer.footerLogoImage.url} alt="" />
+				</div>
 			</FooterLogoContainer>
 		</div>
 	</div>

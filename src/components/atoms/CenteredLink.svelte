@@ -7,7 +7,7 @@
 <style>
 	div {
 		text-align: center;
-        margin-bottom: 20px;
+		margin-bottom: 20px;
 	}
 
 	a {

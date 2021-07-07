@@ -11,7 +11,7 @@
 	{#if !!link}
 		<a href={link}>
 			<div class="imageContainer">
-						<img src={image} {alt}/>
+				<img src={image} {alt} />
 			</div>
 
 			<FooterA>{text}</FooterA>
@@ -21,7 +21,7 @@
 			<div class="imageContainer">
 				<div style="display: flex;">
 					<img src={image} {alt} />
-                </div>
+				</div>
 			</div>
 
 			<div>{text}</div>

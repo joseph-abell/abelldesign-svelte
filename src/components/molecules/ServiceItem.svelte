@@ -19,8 +19,8 @@
 		{#if item.featuredImage.url}
 			<div>
 				<div style="display: flex; align-items: center; justify-content: center;">
-                    <FullWidthMobileImage alt="" src={item.featuredImage.url} height="300" />
-                </div>
+					<FullWidthMobileImage alt="" src={item.featuredImage.url} height="300" />
+				</div>
 			</div>
 		{/if}
 	</a>
@@ -36,16 +36,16 @@
 		margin-bottom: 40px;
 	}
 
-    h3 {
-        font-size: 18px;
-        line-height: 22px;
-        color: #16688c;
-        padding: 0 0 20px;
-    }
+	h3 {
+		font-size: 18px;
+		line-height: 22px;
+		color: #16688c;
+		padding: 0 0 20px;
+	}
 
-    p {
-        color: rgba(0, 0, 0, 0.9);
-    }
+	p {
+		color: rgba(0, 0, 0, 0.9);
+	}
 
 	@media (min-width: 768px) {
 		.data-item-link {
@@ -59,11 +59,11 @@
 
 		.data-item-text {
 			flex-grow: 1;
-            width: calc(100% - 500px);
-            display: flex;
-            flex-direction: column;
-            height: 343px;
-            justify-content: center;
+			width: calc(100% - 500px);
+			display: flex;
+			flex-direction: column;
+			height: 343px;
+			justify-content: center;
 		}
 
 		.row .data-item-text {

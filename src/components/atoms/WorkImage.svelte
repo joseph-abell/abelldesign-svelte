@@ -10,10 +10,9 @@
 	let thisImage;
 	let heightPx = height;
 
-    if (!height.toString().includes('%') && height !== 'auto') {
-        heightPx = `${height}px`;
-    }
-
+	if (!height.toString().includes('%') && height !== 'auto') {
+		heightPx = `${height}px`;
+	}
 
 	onMount(() => {
 		thisImage.onload = () => {
@@ -24,13 +23,7 @@
 	});
 </script>
 
-<img
-	class:loaded
-	bind:this={thisImage}
-	{src}
-	{alt}
-	style="--margin:{margin}"
-/>
+<img class:loaded bind:this={thisImage} {src} {alt} style="--margin:{margin}" />
 
 <style>
 	img {

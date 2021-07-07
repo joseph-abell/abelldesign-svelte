@@ -21,7 +21,7 @@
 					</div>
 
 					<div class="work-image">
-                        <img alt="" src={work.featuredImage.url} />
+						<img alt="" src={work.featuredImage.url} />
 					</div>
 				</a>
 			</ContentListItem>
