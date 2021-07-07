@@ -6,9 +6,7 @@
 	 * @type {import('@sveltejs/kit').Load}
 	 */
 	export async function load({ fetch, page }) {
-		console.log(page.params.slug);
 		const data = await fetchData(fetch, query, { slug: page.params.slug });
-		console.log('data', data);
 		return { props: data };
 	}
 </script>

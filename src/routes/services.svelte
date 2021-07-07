@@ -7,7 +7,6 @@
 	 */
 	export async function load({ fetch }) {
 		const data = (await fetchData(fetch, query)) || { services: [], servicesPages: [{}] };
-		console.log('data', data);
 
 		if (data && data.services) {
 			data.services = data.services.map((service, index) => {
@@ -31,10 +30,8 @@
 	export let services;
 	export let servicesPages;
 
-	console.log(servicesPages);
 	let quote = servicesPages[0].quote;
 	let quoter = servicesPages[0].quoter;
-	console.log(services);
 </script>
 
 <svelte:head>

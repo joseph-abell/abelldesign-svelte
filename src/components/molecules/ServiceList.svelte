@@ -7,7 +7,6 @@
 
 	export let title;
 	export let data;
-	console.log(data);
 	export let slug = '';
 	export let linkText = '';
 	export let headerType = 'h2';
