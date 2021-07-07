@@ -55,7 +55,7 @@
 		<div>
 			<FooterLogoContainer>
 				<IntersectionObserver style="display: flex; align-items: center; justify-content: center;">
-					<FooterImage src={footer.footerLogoImage.url} height="75" alt="" />
+					<FooterImage src={footer.footerLogoImage.url} height="24" alt="" />
 				</IntersectionObserver>
 			</FooterLogoContainer>
 		</div>

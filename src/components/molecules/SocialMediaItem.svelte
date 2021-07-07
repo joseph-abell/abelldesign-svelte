@@ -53,7 +53,7 @@
 		text-decoration: none;
 	}
 	.imageContainer {
-		width: 50px;
+		width: 24px;
 		margin-right: 20px;
 	}
 </style>
