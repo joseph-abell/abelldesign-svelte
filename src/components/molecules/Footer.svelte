@@ -29,13 +29,11 @@
 				text={footer.emailText}
 				link={footer.emailLink}
 				image={footer.emailImage.url}
-				height={footer.emailImage.height}
 			/>
 			<SocialMediaItem
 				text={footer.phoneText}
 				link={null}
 				image={footer.phoneImage.url}
-				height={footer.phoneImage.height}
 			/>
 		</ul>
 		<ul>
@@ -43,13 +41,11 @@
 				text={footer.linkedInText}
 				link={footer.linkedInLink}
 				image={footer.linkedInImage.url}
-				height={footer.linkedInImage.height}
 			/>
 			<SocialMediaItem
 				text={footer.instagramText}
 				link={footer.instagramLink}
 				image={footer.instagramImage.url}
-				height={footer.instagramImage.height}
 			/>
 		</ul>
 		<div>

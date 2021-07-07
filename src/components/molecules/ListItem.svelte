@@ -57,6 +57,7 @@
 
 		.data-item-text {
 			flex-grow: 1;
+            width: calc(100% - 500px);
 		}
 
 		.row .data-item-text {
